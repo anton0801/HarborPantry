@@ -13,8 +13,8 @@ workflows:
         APP_STORE_CONNECT_KEY: key
         APP_STORE_APPLE_ID: 6811164382
         BUNDLE_ID: "appli.kairys.pantry"
-        XCODE_PROJECT: "QueenRight.xcodeproj"
-        XCODE_SCHEME: "QueenRight"
+        XCODE_PROJECT: "HarborPantry.xcodeproj"
+        XCODE_SCHEME: "HarborPantry"
     scripts:
       - name: Clean and Resolve SPM Dependencies
         script: |
