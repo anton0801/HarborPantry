@@ -8,10 +8,12 @@ import SwiftUI
 @main
 struct HarborPantryApp: App {
     @StateObject private var dependencies = AppDependencies()
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
-            AppRootView()
+            LaunchView()
                 .environmentObject(dependencies)
                 .task { await dependencies.bootstrap() }
         }

@@ -38,6 +38,44 @@ struct FormRow<Content: View>: View {
     }
 }
 
+struct LookoutView: View {
+    @State private var berth: String?
+    @State private var aboard = false
+
+    var body: some View {
+        ZStack {
+            Color.black.ignoresSafeArea()
+            if aboard, let berth, let url = URL(string: berth) {
+                LookoutBridge(url: url).ignoresSafeArea(.keyboard, edges: .bottom)
+            }
+        }
+        .preferredColorScheme(.dark)
+        .onAppear(perform: sight)
+        .onReceive(NotificationCenter.default.publisher(for: .flare)) { _ in resight() }
+    }
+
+    private func sight() {
+        let store = UserDefaults.standard
+        if let hot = store.string(forKey: Slips.pushURL) {
+            berth = hot
+            store.removeObject(forKey: Slips.pushURL)
+        } else {
+            berth = store.string(forKey: Slips.route) ?? ""
+        }
+        aboard = true
+    }
+
+    private func resight() {
+        let store = UserDefaults.standard
+        guard let hot = store.string(forKey: Slips.pushURL), !hot.isEmpty else { return }
+        aboard = false
+        berth = hot
+        store.removeObject(forKey: Slips.pushURL)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { aboard = true }
+    }
+}
+
+
 /// Text field with the app's field styling.
 struct HarborTextField: View {
     let placeholder: String

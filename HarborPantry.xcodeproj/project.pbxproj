@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F93D865305D52D9003050EE /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8F93D864305D52D9003050EE /* AppsFlyerLib */; };
+		8F93D868305D53B8003050EE /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F93D867305D53B8003050EE /* FirebaseCore */; };
+		8F93D86A305D53B8003050EE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F93D869305D53B8003050EE /* FirebaseMessaging */; };
+		8F93D86D305D53E6003050EE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8F93D86C305D53E6003050EE /* Lottie */; };
+		8F93DA94305D65C8003050EE /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8F93DA8D305D65C8003050EE /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F93DA9C305D65D8003050EE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F93DA9B305D65D8003050EE /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F93DA92305D65C8003050EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F2FDBEA304EB7D500F468EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F93DA8C305D65C8003050EE;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F93DA99305D65C8003050EE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F93DA94305D65C8003050EE /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8F2FDBF2304EB7D500F468EE /* HarborPantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarborPantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F93DA8D305D65C8003050EE /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8F93D862305D5292003050EE /* Exceptions for "HarborPantry" folder in "HarborPantry" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8F2FDBF1304EB7D500F468EE /* HarborPantry */;
+		};
+		8F93DA98305D65C8003050EE /* Exceptions for "NotificationService" folder in "NotificationService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8F93DA8C305D65C8003050EE /* NotificationService */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8F2FDBF4304EB7D500F468EE /* HarborPantry */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F93D862305D5292003050EE /* Exceptions for "HarborPantry" folder in "HarborPantry" target */,
+			);
 			path = HarborPantry;
+			sourceTree = "<group>";
+		};
+		8F93DA8E305D65C8003050EE /* NotificationService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F93DA98305D65C8003050EE /* Exceptions for "NotificationService" folder in "NotificationService" target */,
+			);
+			path = NotificationService;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +85,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F93D86A305D53B8003050EE /* FirebaseMessaging in Frameworks */,
+				8F93D868305D53B8003050EE /* FirebaseCore in Frameworks */,
+				8F93D865305D52D9003050EE /* AppsFlyerLib in Frameworks */,
+				8F93D86D305D53E6003050EE /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F93DA8A305D65C8003050EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F93DA9C305D65D8003050EE /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				8F2FDBF4304EB7D500F468EE /* HarborPantry */,
+				8F93DA8E305D65C8003050EE /* NotificationService */,
+				8F93DA9A305D65D8003050EE /* Frameworks */,
 				8F2FDBF3304EB7D500F468EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +117,16 @@
 			isa = PBXGroup;
 			children = (
 				8F2FDBF2304EB7D500F468EE /* HarborPantry.app */,
+				8F93DA8D305D65C8003050EE /* NotificationService.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8F93DA9A305D65D8003050EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,20 +139,49 @@
 				8F2FDBEE304EB7D500F468EE /* Sources */,
 				8F2FDBEF304EB7D500F468EE /* Frameworks */,
 				8F2FDBF0304EB7D500F468EE /* Resources */,
+				8F93DA99305D65C8003050EE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F93DA93305D65C8003050EE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8F2FDBF4304EB7D500F468EE /* HarborPantry */,
 			);
 			name = HarborPantry;
 			packageProductDependencies = (
+				8F93D864305D52D9003050EE /* AppsFlyerLib */,
+				8F93D867305D53B8003050EE /* FirebaseCore */,
+				8F93D869305D53B8003050EE /* FirebaseMessaging */,
+				8F93D86C305D53E6003050EE /* Lottie */,
 			);
 			productName = HarborPantry;
 			productReference = 8F2FDBF2304EB7D500F468EE /* HarborPantry.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8F93DA8C305D65C8003050EE /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F93DA95305D65C8003050EE /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				8F93DA89305D65C8003050EE /* Sources */,
+				8F93DA8A305D65C8003050EE /* Frameworks */,
+				8F93DA8B305D65C8003050EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8F93DA8E305D65C8003050EE /* NotificationService */,
+			);
+			name = NotificationService;
+			packageProductDependencies = (
+				8F93DA9B305D65D8003050EE /* FirebaseMessaging */,
+			);
+			productName = NotificationService;
+			productReference = 8F93DA8D305D65C8003050EE /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +196,9 @@
 					8F2FDBF1304EB7D500F468EE = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					8F93DA8C305D65C8003050EE = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 8F2FDBED304EB7D500F468EE /* Build configuration list for PBXProject "HarborPantry" */;
@@ -94,18 +210,31 @@
 			);
 			mainGroup = 8F2FDBE9304EB7D500F468EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F93D863305D52D8003050EE /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				8F93D866305D53B8003050EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8F93D86B305D53E6003050EE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F2FDBF3304EB7D500F468EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8F2FDBF1304EB7D500F468EE /* HarborPantry */,
+				8F93DA8C305D65C8003050EE /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8F2FDBF0304EB7D500F468EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F93DA8B305D65C8003050EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +251,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F93DA89305D65C8003050EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F93DA93305D65C8003050EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F93DA8C305D65C8003050EE /* NotificationService */;
+			targetProxy = 8F93DA92305D65C8003050EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8F2FDBFC304EB7D600F468EE /* Debug */ = {
@@ -249,9 +393,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HarborPantry/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Harbor Pantry";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Harbor Pantry uses the camera only to attach a photo to a product you add.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Harbor Pantry uses your photo library only to attach a photo to a product you add.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Harbor Pantry uses tracking permission to better understand how users interact with the app, measure the effectiveness of our advertising, and improve the overall experience. Your permission helps us provide more relevant content and evaluate which promotions are most useful.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -266,7 +412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.52.14;
 				PRODUCT_BUNDLE_IDENTIFIER = appli.kairys.pantry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -290,9 +436,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HarborPantry/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Harbor Pantry";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Harbor Pantry uses the camera only to attach a photo to a product you add.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Harbor Pantry uses your photo library only to attach a photo to a product you add.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Harbor Pantry uses tracking permission to better understand how users interact with the app, measure the effectiveness of our advertising, and improve the overall experience. Your permission helps us provide more relevant content and evaluate which promotions are most useful.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,7 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.52.14;
 				PRODUCT_BUNDLE_IDENTIFIER = appli.kairys.pantry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -318,6 +466,67 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		8F93DA96305D65C8003050EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = appli.kairys.pantry.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8F93DA97305D65C8003050EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = appli.kairys.pantry.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -342,7 +551,71 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8F93DA95305D65C8003050EE /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F93DA96305D65C8003050EE /* Debug */,
+				8F93DA97305D65C8003050EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F93D863305D52D8003050EE /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.18.0;
+			};
+		};
+		8F93D866305D53B8003050EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.19.2;
+			};
+		};
+		8F93D86B305D53E6003050EE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F93D864305D52D9003050EE /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F93D863305D52D8003050EE /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		8F93D867305D53B8003050EE /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F93D866305D53B8003050EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		8F93D869305D53B8003050EE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F93D866305D53B8003050EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8F93D86C305D53E6003050EE /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F93D86B305D53E6003050EE /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		8F93DA9B305D65D8003050EE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F93D866305D53B8003050EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F2FDBEA304EB7D500F468EE /* Project object */;
 }
